@@ -2,5 +2,9 @@
 .env.*
 !.env.example
 private/
-*.log
+.venv/
 __pycache__/
+*.log
+*.bak
+*.before-*
+.use-host-proxy

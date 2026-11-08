@@ -1,19 +1,43 @@
 services:
   gateway:
     image: ghcr.io/berriai/litellm@sha256:37e2dafb088a7723beb998590682957386dfc83ffea1848486f8e0e5cfac0b06
+    container_name: llm-gateway
     restart: unless-stopped
     ports:
-      - "${GATEWAY_BIND_ADDRESS:-127.0.0.1}:${GATEWAY_PORT:-4000}:4000"
-    env_file: .env
+    - 127.0.0.1:4000:4000
+    - 100.105.249.12:4000:4000
+    env_file:
+    - .env
+    - ./private/providers.env
     volumes:
-      - ./config.yaml:/app/config.yaml:ro
-    command: ["--config", "/app/config.yaml", "--host", "0.0.0.0", "--port", "4000"]
-    depends_on:
-      - anonymous-proxy
-
-  anonymous-proxy:
+    - ./config.docker.yaml:/app/config.yaml:ro
+    command:
+    - --config
+    - /app/config.yaml
+    - --host
+    - 0.0.0.0
+    - --port
+    - '4000'
+  proxy:
     image: node:22-alpine@sha256:0e1754758c2df4cfa3e68d59e2e1b7374bb7fd9ea6328eaaacf15cc934af8202
+    container_name: llm-proxy
     restart: unless-stopped
+    ports:
+    - 127.0.0.1:4002:4002
     volumes:
-      - ./anonymous-proxy.js:/app/anonymous-proxy.js:ro
-    command: ["node", "/app/anonymous-proxy.js"]
+    - ./anonymous-proxy.js:/app/anonymous-proxy.js:ro
+    working_dir: /app
+    command:
+    - node
+    - anonymous-proxy.js
+    environment:
+      PROXY_HOST: 0.0.0.0
+      PROXY_PORT: '4002'
+    healthcheck:
+      test:
+      - CMD-SHELL
+      - wget -qO- http://127.0.0.1:4002/health > /dev/null
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 5s

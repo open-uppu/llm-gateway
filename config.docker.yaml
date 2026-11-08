@@ -1,0 +1,596 @@
+model_list:
+- model_name: local-qwen
+  litellm_params:
+    model: ollama_chat/qwen2.5:7b
+    api_base: http://host.docker.internal:11434
+- model_name: cloud-llm7
+  litellm_params:
+    model: openai/gpt-oss:20b
+    api_base: https://api.llm7.io/v1
+    api_key: unused
+- model_name: local-qwen-14b
+  litellm_params:
+    model: ollama_chat/qwen2.5:14b
+    api_base: http://host.docker.internal:11434
+- model_name: local-gemma-9b
+  litellm_params:
+    model: ollama_chat/gemma2:9b
+    api_base: http://host.docker.internal:11434
+- model_name: local-llama-8b
+  litellm_params:
+    model: ollama_chat/llama3.1:8b
+    api_base: http://host.docker.internal:11434
+- model_name: llm7-deepseek
+  litellm_params:
+    model: openai/DeepSeek-V4-Flash-0731
+    api_base: https://api.llm7.io/v1
+    api_key: unused
+- model_name: llm7-glm
+  litellm_params:
+    model: openai/GLM-5.3-Flash
+    api_base: https://api.llm7.io/v1
+    api_key: unused
+- model_name: llm7-codestral
+  litellm_params:
+    model: openai/codestral-latest
+    api_base: https://api.llm7.io/v1
+    api_key: unused
+- model_name: llm7-minimax
+  litellm_params:
+    model: openai/minimax-m2.7
+    api_base: https://api.llm7.io/v1
+    api_key: unused
+- model_name: llm7-mistral
+  litellm_params:
+    model: openai/mistral-Nemo-Instruct-2407
+    api_base: https://api.llm7.io/v1
+    api_key: unused
+- model_name: llm7-nemotron
+  litellm_params:
+    model: openai/nemotron-3-nano:30b
+    api_base: https://api.llm7.io/v1
+    api_key: unused
+- model_name: kilo/kilo-auto/free
+  litellm_params:
+    model: openai/kilo-auto/free
+    api_base: http://host.docker.internal:4002/kilo
+    api_key: unused
+- model_name: kilo/nvidia/nemotron-3.5-super-vl:free
+  litellm_params:
+    model: openai/nvidia/nemotron-3.5-super-vl:free
+    api_base: http://host.docker.internal:4002/kilo
+    api_key: unused
+- model_name: kilo/reflection/beam-free
+  litellm_params:
+    model: openai/reflection/beam-free
+    api_base: http://host.docker.internal:4002/kilo
+    api_key: unused
+- model_name: kilo/stealth/glyph-cluster
+  litellm_params:
+    model: openai/stealth/glyph-cluster
+    api_base: http://host.docker.internal:4002/kilo
+    api_key: unused
+- model_name: kilo/recursive/flint-v1.0:free
+  litellm_params:
+    model: openai/recursive/flint-v1.0:free
+    api_base: http://host.docker.internal:4002/kilo
+    api_key: unused
+- model_name: kilo/xingchen-agi/xing4.0-29b-a4b:free
+  litellm_params:
+    model: openai/xingchen-agi/xing4.0-29b-a4b:free
+    api_base: http://host.docker.internal:4002/kilo
+    api_key: unused
+- model_name: kilo/dots-studio/dots-3-note-preview:free
+  litellm_params:
+    model: openai/dots-studio/dots-3-note-preview:free
+    api_base: http://host.docker.internal:4002/kilo
+    api_key: unused
+- model_name: kilo/liquid/lfm-2.5-2.6b:free
+  litellm_params:
+    model: openai/liquid/lfm-2.5-2.6b:free
+    api_base: http://host.docker.internal:4002/kilo
+    api_key: unused
+- model_name: kilo/nvidia/nemotron-3.5-lightning:free
+  litellm_params:
+    model: openai/nvidia/nemotron-3.5-lightning:free
+    api_base: http://host.docker.internal:4002/kilo
+    api_key: unused
+- model_name: kilo/thinkingmachines/inkling-small:free
+  litellm_params:
+    model: openai/thinkingmachines/inkling-small:free
+    api_base: http://host.docker.internal:4002/kilo
+    api_key: unused
+- model_name: kilo/thinkingmachines/inkling:free
+  litellm_params:
+    model: openai/thinkingmachines/inkling:free
+    api_base: http://host.docker.internal:4002/kilo
+    api_key: unused
+- model_name: kilo/cohere/north-mini-code:free
+  litellm_params:
+    model: openai/cohere/north-mini-code:free
+    api_base: http://host.docker.internal:4002/kilo
+    api_key: unused
+- model_name: kilo/nvidia/nemotron-3.5-content-safety:free
+  litellm_params:
+    model: openai/nvidia/nemotron-3.5-content-safety:free
+    api_base: http://host.docker.internal:4002/kilo
+    api_key: unused
+- model_name: kilo/nvidia/nemotron-3-ultra-550b-a55b:free
+  litellm_params:
+    model: openai/nvidia/nemotron-3-ultra-550b-a55b:free
+    api_base: http://host.docker.internal:4002/kilo
+    api_key: unused
+- model_name: kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free
+  litellm_params:
+    model: openai/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free
+    api_base: http://host.docker.internal:4002/kilo
+    api_key: unused
+- model_name: kilo/google/gemma-4-31b-it:free
+  litellm_params:
+    model: openai/google/gemma-4-31b-it:free
+    api_base: http://host.docker.internal:4002/kilo
+    api_key: unused
+- model_name: kilo/openrouter/free
+  litellm_params:
+    model: openai/openrouter/free
+    api_base: http://host.docker.internal:4002/kilo
+    api_key: unused
+- model_name: ovh/Qwen3.8-27B
+  litellm_params:
+    model: openai/Qwen3.8-27B
+    api_base: http://host.docker.internal:4002/ovh
+    api_key: unused
+- model_name: ovh/Qwen3.5-397B-A17B
+  litellm_params:
+    model: openai/Qwen3.5-397B-A17B
+    api_base: http://host.docker.internal:4002/ovh
+    api_key: unused
+- model_name: ovh/Qwen3.5-9B
+  litellm_params:
+    model: openai/Qwen3.5-9B
+    api_base: http://host.docker.internal:4002/ovh
+    api_key: unused
+- model_name: ovh/gpt-oss-20b
+  litellm_params:
+    model: openai/gpt-oss-20b
+    api_base: http://host.docker.internal:4002/ovh
+    api_key: unused
+- model_name: ovh/gpt-oss-120b
+  litellm_params:
+    model: openai/gpt-oss-120b
+    api_base: http://host.docker.internal:4002/ovh
+    api_key: unused
+- model_name: ovh/Meta-Llama-3_3-70B-Instruct
+  litellm_params:
+    model: openai/Meta-Llama-3_3-70B-Instruct
+    api_base: http://host.docker.internal:4002/ovh
+    api_key: unused
+- model_name: ovh/Qwen3Guard-Gen-8B
+  litellm_params:
+    model: openai/Qwen3Guard-Gen-8B
+    api_base: http://host.docker.internal:4002/ovh
+    api_key: unused
+- model_name: ovh/Qwen2.5-VL-72B-Instruct
+  litellm_params:
+    model: openai/Qwen2.5-VL-72B-Instruct
+    api_base: http://host.docker.internal:4002/ovh
+    api_key: unused
+- model_name: ovh/Mistral-Small-3.2-24B-Instruct-2506
+  litellm_params:
+    model: openai/Mistral-Small-3.2-24B-Instruct-2506
+    api_base: http://host.docker.internal:4002/ovh
+    api_key: unused
+- model_name: ovh/Mistral-Nemo-Instruct-2407
+  litellm_params:
+    model: openai/Mistral-Nemo-Instruct-2407
+    api_base: http://host.docker.internal:4002/ovh
+    api_key: unused
+- model_name: ovh/Qwen3Guard-Gen-0.6B
+  litellm_params:
+    model: openai/Qwen3Guard-Gen-0.6B
+    api_base: http://host.docker.internal:4002/ovh
+    api_key: unused
+- model_name: ovh/Qwen3.6-27B
+  litellm_params:
+    model: openai/Qwen3.6-27B
+    api_base: http://host.docker.internal:4002/ovh
+    api_key: unused
+- model_name: ovh/whisper-large-v3-turbo
+  litellm_params:
+    model: openai/whisper-large-v3-turbo
+    api_base: http://host.docker.internal:4002/ovh
+    api_key: unused
+- model_name: ovh/whisper-large-v3
+  litellm_params:
+    model: openai/whisper-large-v3
+    api_base: http://host.docker.internal:4002/ovh
+    api_key: unused
+- model_name: ovh/stable-diffusion-xl-base-v10
+  litellm_params:
+    model: openai/stable-diffusion-xl-base-v10
+    api_base: http://host.docker.internal:4002/ovh
+    api_key: unused
+- model_name: ovh/bge-m3
+  litellm_params:
+    model: openai/bge-m3
+    api_base: http://host.docker.internal:4002/ovh
+    api_key: unused
+- model_name: ovh/Qwen3-Embedding-8B
+  litellm_params:
+    model: openai/Qwen3-Embedding-8B
+    api_base: http://host.docker.internal:4002/ovh
+    api_key: unused
+- model_name: ovh/bge-multilingual-gemma2
+  litellm_params:
+    model: openai/bge-multilingual-gemma2
+    api_base: http://host.docker.internal:4002/ovh
+    api_key: unused
+- model_name: ovh/nvr-tts-en-us
+  litellm_params:
+    model: openai/nvr-tts-en-us
+    api_base: http://host.docker.internal:4002/ovh
+    api_key: unused
+- model_name: ovh/nvr-tts-de-de
+  litellm_params:
+    model: openai/nvr-tts-de-de
+    api_base: http://host.docker.internal:4002/ovh
+    api_key: unused
+- model_name: ovh/nvr-tts-es-es
+  litellm_params:
+    model: openai/nvr-tts-es-es
+    api_base: http://host.docker.internal:4002/ovh
+    api_key: unused
+- model_name: ovh/nvr-tts-it-it
+  litellm_params:
+    model: openai/nvr-tts-it-it
+    api_base: http://host.docker.internal:4002/ovh
+    api_key: unused
+- model_name: llm7/DeepSeek-V4-Flash-0731
+  litellm_params:
+    model: openai/DeepSeek-V4-Flash-0731
+    api_base: https://api.llm7.io/v1
+    api_key: unused
+- model_name: llm7/GLM-5.3-Flash
+  litellm_params:
+    model: openai/GLM-5.3-Flash
+    api_base: https://api.llm7.io/v1
+    api_key: unused
+- model_name: llm7/codestral-latest
+  litellm_params:
+    model: openai/codestral-latest
+    api_base: https://api.llm7.io/v1
+    api_key: unused
+- model_name: llm7/gpt-oss:20b
+  litellm_params:
+    model: openai/gpt-oss:20b
+    api_base: https://api.llm7.io/v1
+    api_key: unused
+- model_name: llm7/minimax-m2.7
+  litellm_params:
+    model: openai/minimax-m2.7
+    api_base: https://api.llm7.io/v1
+    api_key: unused
+- model_name: llm7/mistral-Nemo-Instruct-2407
+  litellm_params:
+    model: openai/mistral-Nemo-Instruct-2407
+    api_base: https://api.llm7.io/v1
+    api_key: unused
+- model_name: llm7/nemotron-3-nano:30b
+  litellm_params:
+    model: openai/nemotron-3-nano:30b
+    api_base: https://api.llm7.io/v1
+    api_key: unused
+- model_name: openrouter/recursive/flint-v1.0:free
+  litellm_params:
+    model: openai/recursive/flint-v1.0:free
+    api_base: https://openrouter.ai/api/v1
+    api_key: os.environ/OPENROUTER_API_KEY
+- model_name: openrouter/xingchen-agi/xing4.0-29b-a4b:free
+  litellm_params:
+    model: openai/xingchen-agi/xing4.0-29b-a4b:free
+    api_base: https://openrouter.ai/api/v1
+    api_key: os.environ/OPENROUTER_API_KEY
+- model_name: openrouter/nvidia/nemotron-3.5-super-vl:free
+  litellm_params:
+    model: openai/nvidia/nemotron-3.5-super-vl:free
+    api_base: https://openrouter.ai/api/v1
+    api_key: os.environ/OPENROUTER_API_KEY
+- model_name: openrouter/dots-studio/dots-3-note-preview:free
+  litellm_params:
+    model: openai/dots-studio/dots-3-note-preview:free
+    api_base: https://openrouter.ai/api/v1
+    api_key: os.environ/OPENROUTER_API_KEY
+- model_name: openrouter/liquid/lfm-2.5-2.6b:free
+  litellm_params:
+    model: openai/liquid/lfm-2.5-2.6b:free
+    api_base: https://openrouter.ai/api/v1
+    api_key: os.environ/OPENROUTER_API_KEY
+- model_name: openrouter/nvidia/nemotron-3.5-lightning:free
+  litellm_params:
+    model: openai/nvidia/nemotron-3.5-lightning:free
+    api_base: https://openrouter.ai/api/v1
+    api_key: os.environ/OPENROUTER_API_KEY
+- model_name: openrouter/cohere/north-mini-code:free
+  litellm_params:
+    model: openai/cohere/north-mini-code:free
+    api_base: https://openrouter.ai/api/v1
+    api_key: os.environ/OPENROUTER_API_KEY
+- model_name: openrouter/nvidia/nemotron-3.5-content-safety:free
+  litellm_params:
+    model: openai/nvidia/nemotron-3.5-content-safety:free
+    api_base: https://openrouter.ai/api/v1
+    api_key: os.environ/OPENROUTER_API_KEY
+- model_name: openrouter/nvidia/nemotron-3-ultra-550b-a55b:free
+  litellm_params:
+    model: openai/nvidia/nemotron-3-ultra-550b-a55b:free
+    api_base: https://openrouter.ai/api/v1
+    api_key: os.environ/OPENROUTER_API_KEY
+- model_name: openrouter/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free
+  litellm_params:
+    model: openai/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free
+    api_base: https://openrouter.ai/api/v1
+    api_key: os.environ/OPENROUTER_API_KEY
+- model_name: openrouter/google/gemma-4-26b-a4b-it:free
+  litellm_params:
+    model: openai/google/gemma-4-26b-a4b-it:free
+    api_base: https://openrouter.ai/api/v1
+    api_key: os.environ/OPENROUTER_API_KEY
+- model_name: openrouter/google/gemma-4-31b-it:free
+  litellm_params:
+    model: openai/google/gemma-4-31b-it:free
+    api_base: https://openrouter.ai/api/v1
+    api_key: os.environ/OPENROUTER_API_KEY
+- model_name: openrouter/free
+  litellm_params:
+    model: openai/openrouter/free
+    api_base: https://openrouter.ai/api/v1
+    api_key: os.environ/OPENROUTER_API_KEY
+- model_name: google/gemini-3.8-flash
+  litellm_params:
+    model: openai/gemini-3.8-flash
+    api_base: https://generativelanguage.googleapis.com/v1beta/openai
+    api_key: os.environ/GEMINI_PROVIDER_KEY
+- model_name: google/gemini-3.5-flash
+  litellm_params:
+    model: openai/gemini-3.5-flash
+    api_base: https://generativelanguage.googleapis.com/v1beta/openai
+    api_key: os.environ/GEMINI_PROVIDER_KEY
+- model_name: google/gemini-3.5-flash-lite
+  litellm_params:
+    model: openai/gemini-3.5-flash-lite
+    api_base: https://generativelanguage.googleapis.com/v1beta/openai
+    api_key: os.environ/GEMINI_PROVIDER_KEY
+- model_name: google/gemini-2.5-flash-lite
+  litellm_params:
+    model: openai/gemini-2.5-flash-lite
+    api_base: https://generativelanguage.googleapis.com/v1beta/openai
+    api_key: os.environ/GEMINI_PROVIDER_KEY
+- model_name: cohere/c4ai-aya-expanse-32b
+  litellm_params:
+    model: openai/c4ai-aya-expanse-32b
+    api_base: https://api.cohere.ai/compatibility/v1
+    api_key: os.environ/COHERE_PROVIDER_KEY
+- model_name: cohere/c4ai-aya-vision-32b
+  litellm_params:
+    model: openai/c4ai-aya-vision-32b
+    api_base: https://api.cohere.ai/compatibility/v1
+    api_key: os.environ/COHERE_PROVIDER_KEY
+- model_name: cohere/command-a-03-2025
+  litellm_params:
+    model: openai/command-a-03-2025
+    api_base: https://api.cohere.ai/compatibility/v1
+    api_key: os.environ/COHERE_PROVIDER_KEY
+- model_name: cohere/command-a-plus-05-2026
+  litellm_params:
+    model: openai/command-a-plus-05-2026
+    api_base: https://api.cohere.ai/compatibility/v1
+    api_key: os.environ/COHERE_PROVIDER_KEY
+- model_name: cohere/command-a-reasoning-08-2025
+  litellm_params:
+    model: openai/command-a-reasoning-08-2025
+    api_base: https://api.cohere.ai/compatibility/v1
+    api_key: os.environ/COHERE_PROVIDER_KEY
+- model_name: cohere/command-a-translate-08-2025
+  litellm_params:
+    model: openai/command-a-translate-08-2025
+    api_base: https://api.cohere.ai/compatibility/v1
+    api_key: os.environ/COHERE_PROVIDER_KEY
+- model_name: cohere/command-a-vision-07-2025
+  litellm_params:
+    model: openai/command-a-vision-07-2025
+    api_base: https://api.cohere.ai/compatibility/v1
+    api_key: os.environ/COHERE_PROVIDER_KEY
+- model_name: cohere/command-r-08-2024
+  litellm_params:
+    model: openai/command-r-08-2024
+    api_base: https://api.cohere.ai/compatibility/v1
+    api_key: os.environ/COHERE_PROVIDER_KEY
+- model_name: cohere/command-r-plus-08-2024
+  litellm_params:
+    model: openai/command-r-plus-08-2024
+    api_base: https://api.cohere.ai/compatibility/v1
+    api_key: os.environ/COHERE_PROVIDER_KEY
+- model_name: cohere/command-r7b-12-2024
+  litellm_params:
+    model: openai/command-r7b-12-2024
+    api_base: https://api.cohere.ai/compatibility/v1
+    api_key: os.environ/COHERE_PROVIDER_KEY
+- model_name: cohere/command-r7b-arabic-02-2025
+  litellm_params:
+    model: openai/command-r7b-arabic-02-2025
+    api_base: https://api.cohere.ai/compatibility/v1
+    api_key: os.environ/COHERE_PROVIDER_KEY
+- model_name: cloudflare/@cf/openai/gpt-oss-20b
+  litellm_params:
+    model: openai/@cf/openai/gpt-oss-20b
+    api_base: https://api.cloudflare.com/client/v4/accounts/f5ef27d87fda5df0ef4c475c3542a351/ai/v1
+    api_key: os.environ/CLOUDFLARE_PROVIDER_KEY
+- model_name: cloudflare/@cf/openai/gpt-oss-120b
+  litellm_params:
+    model: openai/@cf/openai/gpt-oss-120b
+    api_base: https://api.cloudflare.com/client/v4/accounts/f5ef27d87fda5df0ef4c475c3542a351/ai/v1
+    api_key: os.environ/CLOUDFLARE_PROVIDER_KEY
+- model_name: cloudflare/@cf/meta/llama-3.3-70b-instruct-fp8-fast
+  litellm_params:
+    model: openai/@cf/meta/llama-3.3-70b-instruct-fp8-fast
+    api_base: https://api.cloudflare.com/client/v4/accounts/f5ef27d87fda5df0ef4c475c3542a351/ai/v1
+    api_key: os.environ/CLOUDFLARE_PROVIDER_KEY
+- model_name: cloudflare/@cf/meta/llama-4-scout-17b-16e-instruct
+  litellm_params:
+    model: openai/@cf/meta/llama-4-scout-17b-16e-instruct
+    api_base: https://api.cloudflare.com/client/v4/accounts/f5ef27d87fda5df0ef4c475c3542a351/ai/v1
+    api_key: os.environ/CLOUDFLARE_PROVIDER_KEY
+- model_name: cloudflare/@cf/google/gemma-4-26b-a4b-it
+  litellm_params:
+    model: openai/@cf/google/gemma-4-26b-a4b-it
+    api_base: https://api.cloudflare.com/client/v4/accounts/f5ef27d87fda5df0ef4c475c3542a351/ai/v1
+    api_key: os.environ/CLOUDFLARE_PROVIDER_KEY
+- model_name: cloudflare/@cf/mistralai/mistral-small-3.1-24b-instruct
+  litellm_params:
+    model: openai/@cf/mistralai/mistral-small-3.1-24b-instruct
+    api_base: https://api.cloudflare.com/client/v4/accounts/f5ef27d87fda5df0ef4c475c3542a351/ai/v1
+    api_key: os.environ/CLOUDFLARE_PROVIDER_KEY
+- model_name: sambanova/Meta-Llama-3.3-70B-Instruct
+  litellm_params:
+    model: openai/Meta-Llama-3.3-70B-Instruct
+    api_base: https://api.sambanova.ai/v1
+    api_key: os.environ/SAMBANOVA_PROVIDER_KEY
+- model_name: sambanova/MiniMax-M3.1-Flash
+  litellm_params:
+    model: openai/MiniMax-M3.1-Flash
+    api_base: https://api.sambanova.ai/v1
+    api_key: os.environ/SAMBANOVA_PROVIDER_KEY
+- model_name: sambanova/gemma-4-31B-it
+  litellm_params:
+    model: openai/gemma-4-31B-it
+    api_base: https://api.sambanova.ai/v1
+    api_key: os.environ/SAMBANOVA_PROVIDER_KEY
+- model_name: sambanova/gpt-oss-120b
+  litellm_params:
+    model: openai/gpt-oss-120b
+    api_base: https://api.sambanova.ai/v1
+    api_key: os.environ/SAMBANOVA_PROVIDER_KEY
+- model_name: groq/openai/gpt-oss-20b
+  litellm_params:
+    model: openai/openai/gpt-oss-20b
+    api_base: https://api.groq.com/openai/v1
+    api_key: os.environ/GROQ_PROVIDER_KEY
+    extra_headers:
+      User-Agent: curl/8.7.1
+- model_name: groq/openai/gpt-oss-120b
+  litellm_params:
+    model: openai/openai/gpt-oss-120b
+    api_base: https://api.groq.com/openai/v1
+    api_key: os.environ/GROQ_PROVIDER_KEY
+    extra_headers:
+      User-Agent: curl/8.7.1
+- model_name: groq/qwen/qwen3.8-27b
+  litellm_params:
+    model: openai/qwen/qwen3.8-27b
+    api_base: https://api.groq.com/openai/v1
+    api_key: os.environ/GROQ_PROVIDER_KEY
+    extra_headers:
+      User-Agent: curl/8.7.1
+- model_name: aion/aion-labs/aion-2.0
+  litellm_params:
+    model: openai/aion-labs/aion-2.0
+    api_base: https://api.aionlabs.ai/v1
+    api_key: os.environ/AION_PROVIDER_KEY
+    extra_headers:
+      User-Agent: curl/8.7.1
+- model_name: aion/aion-labs/aion-3.0
+  litellm_params:
+    model: openai/aion-labs/aion-3.0
+    api_base: https://api.aionlabs.ai/v1
+    api_key: os.environ/AION_PROVIDER_KEY
+    extra_headers:
+      User-Agent: curl/8.7.1
+- model_name: aion/aion-labs/aion-3.0-mini
+  litellm_params:
+    model: openai/aion-labs/aion-3.0-mini
+    api_base: https://api.aionlabs.ai/v1
+    api_key: os.environ/AION_PROVIDER_KEY
+    extra_headers:
+      User-Agent: curl/8.7.1
+- model_name: aion/aion-labs/aion-rp-llama-3.1-8b
+  litellm_params:
+    model: openai/aion-labs/aion-rp-llama-3.1-8b
+    api_base: https://api.aionlabs.ai/v1
+    api_key: os.environ/AION_PROVIDER_KEY
+    extra_headers:
+      User-Agent: curl/8.7.1
+- model_name: nvidia/nvidia/nemotron-3.5-bolt-e4b
+  litellm_params:
+    model: openai/nvidia/nemotron-3.5-bolt-e4b
+    api_base: https://integrate.api.nvidia.com/v1
+    api_key: os.environ/NVIDIA_PROVIDER_KEY
+    extra_headers:
+      User-Agent: curl/8.7.1
+- model_name: nvidia/nvidia/nemotron-3.5-lightning-30b-a3b
+  litellm_params:
+    model: openai/nvidia/nemotron-3.5-lightning-30b-a3b
+    api_base: https://integrate.api.nvidia.com/v1
+    api_key: os.environ/NVIDIA_PROVIDER_KEY
+    extra_headers:
+      User-Agent: curl/8.7.1
+- model_name: nvidia/google/gemma-4-31b-it
+  litellm_params:
+    model: openai/google/gemma-4-31b-it
+    api_base: https://integrate.api.nvidia.com/v1
+    api_key: os.environ/NVIDIA_PROVIDER_KEY
+    extra_headers:
+      User-Agent: curl/8.7.1
+- model_name: auto
+  litellm_params:
+    model: openai/openai/gpt-oss-20b
+    api_base: https://api.groq.com/openai/v1
+    api_key: os.environ/GROQ_PROVIDER_KEY
+    extra_headers:
+      User-Agent: curl/8.7.1
+    timeout: 45
+- model_name: auto-reserve-1
+  litellm_params:
+    model: openai/openai/gpt-oss-20b
+    api_base: https://api.groq.com/openai/v1
+    api_key: os.environ/GROQ_PROVIDER_KEY
+    extra_headers:
+      User-Agent: curl/8.7.1
+    timeout: 45
+- model_name: auto
+  litellm_params:
+    model: openai/nvidia/nemotron-3.5-bolt-e4b
+    api_base: https://integrate.api.nvidia.com/v1
+    api_key: os.environ/NVIDIA_PROVIDER_KEY
+    extra_headers:
+      User-Agent: curl/8.7.1
+    timeout: 45
+- model_name: auto-reserve-2
+  litellm_params:
+    model: openai/nvidia/nemotron-3.5-bolt-e4b
+    api_base: https://integrate.api.nvidia.com/v1
+    api_key: os.environ/NVIDIA_PROVIDER_KEY
+    extra_headers:
+      User-Agent: curl/8.7.1
+    timeout: 45
+- model_name: auto
+  litellm_params:
+    model: openai/openrouter/free
+    api_base: https://openrouter.ai/api/v1
+    api_key: os.environ/OPENROUTER_API_KEY
+    timeout: 45
+- model_name: auto-reserve-3
+  litellm_params:
+    model: openai/openrouter/free
+    api_base: https://openrouter.ai/api/v1
+    api_key: os.environ/OPENROUTER_API_KEY
+    timeout: 45
+router_settings:
+  routing_strategy: simple-shuffle
+  enable_weighted_failover: true
+  num_retries: 1
+  max_fallbacks: 3
+  fallbacks:
+  - auto:
+    - auto-reserve-1
+    - auto-reserve-2
+    - auto-reserve-3

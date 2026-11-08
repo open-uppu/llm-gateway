@@ -2,7 +2,10 @@
 const http = require('node:http');
 const https = require('node:https');
 const targets = { kilo: 'https://ai-gateway.kilo.ai/api/v1', ovh: 'https://oai.endpoints.kepler.ai.cloud.ovh.net/v1' };
+const host = process.env.PROXY_HOST || '127.0.0.1';
+const port = Number(process.env.PROXY_PORT || 4002);
 http.createServer((req, res) => {
+  if (req.url === '/health') { res.writeHead(200, { 'content-type': 'application/json' }); res.end('{"status":"ok"}'); return; }
   const match = /^\/(kilo|ovh)(\/[^?#]*)?(\?[^#]*)?$/.exec(req.url);
   if (!match) { res.writeHead(404).end(); return; }
   const path = match[2] || '';
@@ -20,4 +23,4 @@ http.createServer((req, res) => {
   req.on('aborted', () => upstream.destroy());
   res.on('close', () => { if (!res.writableEnded) upstream.destroy(); });
   req.pipe(upstream);
-}).listen(4002, '0.0.0.0');
+}).listen(port, host, () => console.log(`anonymous proxy listening on http://${host}:${port}`));
