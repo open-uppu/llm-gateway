@@ -10,7 +10,7 @@ services:
     - .env
     - ./private/providers.env
     volumes:
-    - ./config.docker.yaml:/app/config.yaml:ro
+    - D:/llm-gateway/config.docker.yaml:/app/config.yaml:ro
     command:
     - --config
     - /app/config.yaml
@@ -25,7 +25,7 @@ services:
     ports:
     - 127.0.0.1:4002:4002
     volumes:
-    - ./anonymous-proxy.js:/app/anonymous-proxy.js:ro
+    - D:/llm-gateway/anonymous-proxy.js:/app/anonymous-proxy.js:ro
     working_dir: /app
     command:
     - node
@@ -41,3 +41,4 @@ services:
       timeout: 5s
       retries: 3
       start_period: 5s
+
