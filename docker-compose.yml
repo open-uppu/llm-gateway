@@ -7,8 +7,8 @@ services:
     - 127.0.0.1:4000:4000
     - 100.105.249.12:4000:4000
     env_file:
-    - .env
-    - ./private/providers.env
+    - D:/workspace/open-uppu/llm-gateway/.env
+    - D:/workspace/open-uppu/llm-gateway/private/providers.env
     volumes:
     - D:/llm-gateway/config.docker.yaml:/app/config.yaml:ro
     command:
