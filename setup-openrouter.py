@@ -11,7 +11,7 @@ for m in catalog:
  p=m.get('pricing',{})
  if m.get('id','').endswith(':free') and p.get('prompt') is not None and p.get('completion') is not None and float(p['prompt'])==0 and float(p['completion'])==0 and 'text' in m.get('architecture',{}).get('output_modalities',[]): free.append(m['id'])
 assert free, 'No zero-price free models in live catalog'
-p=root/'config.yaml'; cp=root/'compose.yaml'
+p=root/'config.yaml'; cp=(root/'docker-compose.yml' if (root/'docker-compose.yml').exists() else root/'compose.yaml')
 data=yaml.safe_load(p.read_text(encoding='utf-8')); compose=yaml.safe_load(cp.read_text(encoding='utf-8'))
 stamp=datetime.datetime.now().strftime('%Y%m%d-%H%M%S')
 for f in (p,cp): shutil.copy2(f,f.with_name(f.name+'.before-openrouter-'+stamp))

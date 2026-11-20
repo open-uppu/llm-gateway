@@ -8,3 +8,5 @@ __pycache__/
 *.bak
 *.before-*
 .use-host-proxy
+
+agent-*

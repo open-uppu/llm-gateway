@@ -4,7 +4,7 @@ OpenAI-compatible LiteLLM gateway for free and anonymous providers. Two containe
 
 ## Layout
 
-- `compose.yaml` — gateway mounts `config.docker.yaml`; proxy is published only on `127.0.0.1:4002` and has a `/health` healthcheck.
+- `docker-compose.yml` — gateway mounts `config.docker.yaml`; proxy is published only on `127.0.0.1:4002` and has a `/health` healthcheck.
 - `config.docker.yaml` — configuration used inside the container. Kilo/OVH point at `http://host.docker.internal:4002/...`.
 - `config.yaml` — same catalog for running LiteLLM directly on the host (`127.0.0.1:4002`), e.g. without Docker.
 - `anonymous-proxy.js` — strips `Authorization` and forwards `/kilo` and `/ovh`. `PROXY_HOST`/`PROXY_PORT` control the listener (default `127.0.0.1:4002`); `GET /health` returns `{"status":"ok"}` without calling upstream.
@@ -16,7 +16,7 @@ OpenAI-compatible LiteLLM gateway for free and anonymous providers. Two containe
 3. Create `private/providers.env` with the provider keys (same names as `.env.example`). Compose loads it as a second `env_file`; directory `private/` is ignored by Git.
 4. `docker compose up -d`.
 
-The gateway publishes `127.0.0.1:4000` and `100.105.249.12:4000` (Tailscale). Edit the second mapping in `compose.yaml` to your address or remove it.
+The gateway publishes `127.0.0.1:4000` and `100.105.249.12:4000` (Tailscale). Edit the second mapping in `docker-compose.yml` to your address or remove it.
 
 ## Routing
 

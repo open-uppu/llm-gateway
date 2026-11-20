@@ -318,7 +318,7 @@ API base: `https://api.siliconflow.cn/v1`
 - [Kilo ระบุ](https://kilo.ai/docs/gateway/models-and-providers) ว่า auto/free อาจส่งต่อข้อความไปยังผู้ให้บริการที่บันทึกหรือนำไปปรับปรุงบริการ และ NVIDIA free มีเงื่อนไข trial; ไม่ควรส่งข้อมูลส่วนบุคคลหรือข้อมูลลับ
 - การทดสอบ ณ เวลาจัดทำ: Ollama, LLM7, OVH และ Kilo บางรุ่นตอบกลับผ่าน gateway; Kilo บางรุ่นได้รับ HTTP 429 หรือ 503 ไม่ได้รับประกันการใช้งานทุกโมเดล
 - Anonymous proxy อยู่ที่ 127.0.0.1:4002 ผ่าน Windows Scheduled Task และ gateway อยู่ใน Docker โดยเปิดพอร์ตบน 127.0.0.1 และ 100.105.249.12; ต้องให้ Docker Desktop และ Windows Scheduled Task เริ่มทำงานก่อน
-- อัปเดตรายการ anonymous ด้วย `D:\llm-gateway\configure-anonymous.py` แล้วรัน `D:\llm-gateway\.venv\Scripts\python.exe D:\llm-gateway\prepare_docker.py` และ `docker compose -f D:\llm-gateway\compose.yaml restart` เพื่อโหลดรายการใหม่; สคริปต์สร้าง alias ที่ขึ้นต้น `kilo/`, `ovh/`, `llm7/` ใหม่
+- อัปเดตรายการ anonymous ด้วย `D:\llm-gateway\configure-anonymous.py` แล้วรัน `D:\llm-gateway\.venv\Scripts\python.exe D:\llm-gateway\prepare_docker.py` และ `docker compose -f D:\llm-gateway\docker-compose.yml restart` เพื่อโหลดรายการใหม่; สคริปต์สร้าง alias ที่ขึ้นต้น `kilo/`, `ovh/`, `llm7/` ใหม่
 
 ## อัปเดต 5 พฤศจิกายน 2026
 
